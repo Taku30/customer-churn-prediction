@@ -1,6 +1,3 @@
-# customer-churn-prediction
-Machine learning project to predict customer churn and identify key drivers using logistic regression and random forest.
-
 # 📊 Customer Churn Prediction (Telecom Dataset)
 
 A machine learning project to predict customer churn and identify key drivers of customer retention.
