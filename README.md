@@ -2,6 +2,15 @@
 
 A machine learning project to predict customer churn and identify key drivers of customer retention.
 
+## Dataset
+
+This project uses the Telco Customer Churn dataset.
+
+- Source: IBM Sample Dataset
+- Link: https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+
+Download the dataset and place it in the project directory before running the notebook.
+
 ---
 
 ## 📌 Overview
