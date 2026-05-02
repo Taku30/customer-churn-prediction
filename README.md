@@ -59,6 +59,8 @@ Target variable:
 
 ## Feature Importance
 
+![Feature Importance](feature_importance.png)
+
 Top drivers of churn (Random Forest):
 
 - Tenure  
