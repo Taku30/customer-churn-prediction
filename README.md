@@ -1,125 +1,104 @@
-# 📊 Customer Churn Prediction (Telecom Dataset)
+# Customer Churn Prediction
 
-A machine learning project to predict customer churn and identify key drivers of customer retention.
+This project builds a machine learning model to predict customer churn using behavioral and account-level features. The objective is to identify high-risk customers and support data-driven retention strategies.
+
+---
+
+## Project Overview
+
+Customer churn is a critical issue in subscription-based businesses. Predicting which customers are likely to leave allows companies to take proactive action and reduce revenue loss.
+
+This project focuses on:
+- Understanding churn patterns in customer data  
+- Building a classification model to predict churn  
+- Identifying key features influencing customer behavior  
+- Translating model outputs into business recommendations  
+
+---
 
 ## Dataset
 
-This project uses the Telco Customer Churn dataset.
+- Source: Telco Customer Churn dataset (Kaggle)  
+- Contains customer demographics, service usage, and billing information  
 
-- Source: IBM Sample Dataset
-- Link: https://www.kaggle.com/datasets/blastchar/telco-customer-churn
-
-Download the dataset and place it in the project directory before running the notebook.
-
----
-
-## 📌 Overview
-Customer churn is a critical problem for telecom companies, as acquiring new customers is significantly more expensive than retaining existing ones.
-
-This project analyzes customer behavior and builds predictive models to identify customers at risk of leaving, enabling targeted retention strategies.
+Target variable:
+- Churn (Yes / No)
 
 ---
 
-## 🎯 Objectives
-- Predict whether a customer will churn  
-- Identify key factors driving churn  
-- Compare model performance and select the most effective approach  
+## Methodology
+
+### Data Cleaning
+- Removed missing values  
+- Converted data types  
+- Filtered invalid or inconsistent records  
+
+### Feature Engineering
+- Encoded categorical variables  
+- Prepared features for model input  
+
+### Model Building
+- Algorithm: Random Forest Classifier  
+- Applied train-test split  
+- Trained model to classify churn  
+
+### Evaluation
+- Evaluated model performance using accuracy  
+- Extracted feature importance for interpretation  
 
 ---
 
-## 🧠 Models Used
-- Logistic Regression (baseline)  
-- Logistic Regression (class-weighted)  
-- Random Forest (baseline and tuned)  
+## Key Insights
+
+- Customers with low tenure are more likely to churn  
+- Monthly charges are strongly associated with churn behavior  
+- Contract type is a major determinant of retention  
+- Customer value and engagement patterns influence churn risk  
 
 ---
 
-## ⚙️ Methodology
-
-### Data Preprocessing
-- Converted categorical variables using one-hot encoding  
-- Handled missing values (TotalCharges)  
-- Converted all features to numeric format  
-- Split data into training and testing sets  
-- Applied feature scaling for Logistic Regression  
-
-### Handling Class Imbalance
-- Used class_weight="balanced" to improve recall for churn prediction  
-
-### Model Evaluation
-Models were evaluated using:
-- Accuracy  
-- Precision  
-- Recall  
-- F1-score  
-
----
-
-## 📈 Results
-
-### Logistic Regression (Balanced)
-- Recall for churn: ~0.75  
-- Strong ability to identify at-risk customers  
-- High interpretability through coefficients  
-
-### Random Forest (Tuned)
-- Similar performance to Logistic Regression  
-- Captures non-linear relationships  
-- Did not significantly outperform Logistic Regression  
-
-👉 Final Decision:  
-Logistic Regression was selected due to its interpretability and comparable performance.
-
----
-
-## 🔍 Key Insights
-
-- Customers with short tenure are significantly more likely to churn  
-- Month-to-month contracts show the highest churn rates  
-- Higher monthly charges are associated with increased churn  
-- Fiber optic users tend to churn more, possibly due to higher expectations  
-
----
-
-## 💼 Business Impact
-
-- Focus retention efforts on new customers (low tenure)  
-- Encourage long-term contracts to reduce churn  
-- Improve service quality for high-paying customers  
-- Use model predictions to proactively target high-risk customers  
-
----
-
-## 📊 Feature Importance
+## Feature Importance
 
 Top drivers of churn (Random Forest):
+
 - Tenure  
 - Total Charges  
 - Contract Type  
 - Monthly Charges  
 - Internet Service  
 
-![Feature Importance](images/feature_importance.png)
+Feature Importance
 
 ---
 
-## 📁 Project Structure
+## Business Recommendations
+
+- Focus retention efforts on new customers  
+- Encourage long-term contracts  
+- Monitor customers with high monthly charges  
+- Improve service quality for high-value users  
+- Use model predictions to target at-risk customers proactively  
+
+---
+
+## Project Structure
 
 customer-churn-prediction/  
-│── data/  
-│── images/  
-│── notebook/  
-│── README.md  
+├── churn_analysis.ipynb  
+├── feature_importance.png  
+├── README.md  
 
 ---
 
-## 🧩 Future Improvements
-- Add ROC-AUC evaluation  
-- Perform hyperparameter tuning (GridSearchCV)  
-- Try Gradient Boosting / XGBoost  
-- Deploy as a web application  
+## Future Improvements
+
+- Add ROC-AUC and precision/recall evaluation  
+- Perform hyperparameter tuning  
+- Explore advanced models (e.g., gradient boosting)  
+- Deploy the model as an application  
 
 ---
 
-## 👤 Author
-Taku Takahashi
+## Summary
+
+This project demonstrates how machine learning can be applied to predict customer churn and generate actionable business insights. The approach combines data analysis, modeling, and interpretation to support retention strategies.
