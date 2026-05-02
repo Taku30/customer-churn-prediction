@@ -69,8 +69,6 @@ Top drivers of churn (Random Forest):
 - Monthly Charges  
 - Internet Service  
 
-Feature Importance
-
 ---
 
 ## Business Recommendations
